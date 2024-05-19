@@ -1,0 +1,31 @@
+<div class="flex space-x-4">
+  <div class="w-64">
+    <h2 class="text-2xl font-bold mb-4">Categorias</h2>
+    <ul class="grid grid-cols-1 gap-4">
+      <li class="rounded-lg p-4 relative"
+        *ngFor="let category of categories()">
+        <a class="block w-full" [routerLink]="['categoria', category.id]">
+
+          <div class="absolute bottom-0 left-0 w-full bg-white px-4 py-2">
+            <h3
+              class="font-medium text-center text-black shadow-lg">{{
+              category.name }}</h3>
+          </div>
+          <img class="w-full mb-2"
+            [src]="category.imagen"
+            alt="{{ category.name }} image">
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="font-[sans-serif]">
+    <div class="p-4 mx-auto lg:max-w-6xl max-w-xl md:max-w-full">
+
+      <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <app-product *ngFor="let product of products()" [product]="product"
+          (addToCart)="addToCart($event)" />
+      </div>
+    </div>
+  </div>
+
+</div>

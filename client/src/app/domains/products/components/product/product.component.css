@@ -1,0 +1,19 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product-title {
+  height: 3em; /* Ajusta según el diseño deseado */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Número de líneas */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.text-gray-400.ml-2.font-medium {
+  text-decoration: line-through;
+}
