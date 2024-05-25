@@ -52,7 +52,7 @@
                                 </path>
                             </svg>
                             <div
-                                *ngIf="personalDataForm.controls.nombre.invalid && personalDataForm.controls.nombre.touched"
+                                *ngIf="personalDataForm.controls['nombre'].invalid && personalDataForm.controls['nombre'].touched"
                                 class="text-red-500 text-xs mt-1">
                                 Nombre es requerido.
                             </div>
@@ -71,7 +71,7 @@
                                 </path>
                             </svg>
                             <div
-                                *ngIf="personalDataForm.controls.apellido.invalid && personalDataForm.controls.apellido.touched"
+                                *ngIf="personalDataForm.controls['apellido'].invalid && personalDataForm.controls['apellido'].touched"
                                 class="text-red-500 text-xs mt-1">
                                 Apellido es requerido.
                             </div>
@@ -102,7 +102,7 @@
                                 </g>
                             </svg>
                             <div
-                                *ngIf="personalDataForm.controls.email.invalid && personalDataForm.controls.email.touched"
+                                *ngIf="personalDataForm.controls['email'].invalid && personalDataForm.controls['email'].touched"
                                 class="text-red-500 text-xs mt-1">
                                 Email es requerido y debe ser válido.
                             </div>
@@ -119,7 +119,7 @@
                                 </path>
                             </svg>
                             <div
-                                *ngIf="personalDataForm.controls.telefono.invalid && personalDataForm.controls.telefono.touched"
+                                *ngIf="personalDataForm.controls['telefono'].invalid && personalDataForm.controls['telefono'].touched"
                                 class="text-red-500 text-xs mt-1">
                                 Teléfono es requerido.
                             </div>

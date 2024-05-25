@@ -2,13 +2,14 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterLinkWithHref } from '@angular/router';
 import { CartService } from '../../../shared/services/cart.service';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common'; // Importa CommonModule
 
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-product-detail',
+  selector: 'app-proceso-pago',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLinkWithHref],
+  imports: [ReactiveFormsModule, RouterLinkWithHref, CommonModule], // Añade CommonModule aquí
   templateUrl: './proceso-pago.component.html',
   styleUrls: ['./proceso-pago.component.css']
 })
