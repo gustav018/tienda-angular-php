@@ -11,7 +11,7 @@ export class ProductService {
 
   constructor() {}
   getProducts_por_categoria( category_id?: string ) {
-   let url = 'http://localhost/gym/productos_por_categoria.php';
+   let url = 'http://localhost/tienda-angular-php/server/productos_por_categoria.php';
     if (category_id) {
       url += `?category_id=${category_id}`;
     }
@@ -21,7 +21,7 @@ export class ProductService {
   }
 
   getProducts(category_id?: string) {
-    const url = new URL('http://localhost/gym/getAll.php');
+    const url = new URL('http://localhost/tienda-angular-php/server/getAll.php');
     if (category_id) {
       url.searchParams.set('categoryId', category_id);
     }
@@ -31,7 +31,7 @@ export class ProductService {
 
   getOne(id: string) {
     return this.http.get<Product>(
-      `http://localhost/gym/get.php/?id=${id}`
+      `http://localhost/tienda-angular-php/server/get.php/?id=${id}`
     );
   }
 }

@@ -12,7 +12,7 @@ export class CategoryService {
 
   getAll() {
     return this.http.get<Category[]>(
-      `http://localhost/gym/getCategorias.php`
+      `http://localhost/tienda-angular-php/server/getCategorias.php`
     );
   }
 }
